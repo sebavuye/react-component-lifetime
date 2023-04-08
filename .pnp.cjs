@@ -34,6 +34,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["autoprefixer", "virtual:368f914c42b6dbadff0bc99661da2b307b505896c6e2c09abdbeee2d472d1cfd4f6edb155d3aa56452678b02ab1269a97c046fac2f929d7890fd34f5c4b8af16#npm:10.4.14"],\
             ["eslint", "npm:8.38.0"],\
             ["eslint-config-next", "virtual:368f914c42b6dbadff0bc99661da2b307b505896c6e2c09abdbeee2d472d1cfd4f6edb155d3aa56452678b02ab1269a97c046fac2f929d7890fd34f5c4b8af16#npm:13.3.0"],\
+            ["eslint-config-prettier", "virtual:368f914c42b6dbadff0bc99661da2b307b505896c6e2c09abdbeee2d472d1cfd4f6edb155d3aa56452678b02ab1269a97c046fac2f929d7890fd34f5c4b8af16#npm:8.8.0"],\
             ["next", "virtual:368f914c42b6dbadff0bc99661da2b307b505896c6e2c09abdbeee2d472d1cfd4f6edb155d3aa56452678b02ab1269a97c046fac2f929d7890fd34f5c4b8af16#npm:13.3.0"],\
             ["postcss", "npm:8.4.21"],\
             ["prettier", "npm:2.8.7"],\
@@ -1513,6 +1514,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "@types/typescript",\
             "eslint",\
             "typescript"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["eslint-config-prettier", [\
+        ["npm:8.8.0", {\
+          "packageLocation": "./.yarn/cache/eslint-config-prettier-npm-8.8.0-f1bf18b9b1-1e94c3882c.zip/node_modules/eslint-config-prettier/",\
+          "packageDependencies": [\
+            ["eslint-config-prettier", "npm:8.8.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:368f914c42b6dbadff0bc99661da2b307b505896c6e2c09abdbeee2d472d1cfd4f6edb155d3aa56452678b02ab1269a97c046fac2f929d7890fd34f5c4b8af16#npm:8.8.0", {\
+          "packageLocation": "./.yarn/__virtual__/eslint-config-prettier-virtual-9a3ced1803/0/cache/eslint-config-prettier-npm-8.8.0-f1bf18b9b1-1e94c3882c.zip/node_modules/eslint-config-prettier/",\
+          "packageDependencies": [\
+            ["eslint-config-prettier", "virtual:368f914c42b6dbadff0bc99661da2b307b505896c6e2c09abdbeee2d472d1cfd4f6edb155d3aa56452678b02ab1269a97c046fac2f929d7890fd34f5c4b8af16#npm:8.8.0"],\
+            ["@types/eslint", null],\
+            ["eslint", "npm:8.38.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/eslint",\
+            "eslint"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -3776,6 +3799,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["autoprefixer", "virtual:368f914c42b6dbadff0bc99661da2b307b505896c6e2c09abdbeee2d472d1cfd4f6edb155d3aa56452678b02ab1269a97c046fac2f929d7890fd34f5c4b8af16#npm:10.4.14"],\
             ["eslint", "npm:8.38.0"],\
             ["eslint-config-next", "virtual:368f914c42b6dbadff0bc99661da2b307b505896c6e2c09abdbeee2d472d1cfd4f6edb155d3aa56452678b02ab1269a97c046fac2f929d7890fd34f5c4b8af16#npm:13.3.0"],\
+            ["eslint-config-prettier", "virtual:368f914c42b6dbadff0bc99661da2b307b505896c6e2c09abdbeee2d472d1cfd4f6edb155d3aa56452678b02ab1269a97c046fac2f929d7890fd34f5c4b8af16#npm:8.8.0"],\
             ["next", "virtual:368f914c42b6dbadff0bc99661da2b307b505896c6e2c09abdbeee2d472d1cfd4f6edb155d3aa56452678b02ab1269a97c046fac2f929d7890fd34f5c4b8af16#npm:13.3.0"],\
             ["postcss", "npm:8.4.21"],\
             ["prettier", "npm:2.8.7"],\
