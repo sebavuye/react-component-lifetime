@@ -80,6 +80,7 @@
     "@typescript-eslint/member-ordering": ["error", { "default": {"order": "alphabetically" }}],
 
     // eslint
-    "no-ternary": "off"
+    "no-ternary": "off",
+    "one-var": "off"
   }
 }

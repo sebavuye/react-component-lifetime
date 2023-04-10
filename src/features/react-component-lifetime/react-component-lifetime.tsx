@@ -1,3 +1,4 @@
+import { ReactComponentLifetimeHeader } from "@/features/react-component-lifetime/react-component-lifetime-header";
 import { useState } from "react";
 
 export const ReactComponentLifetime = (): JSX.Element => {
@@ -6,7 +7,7 @@ export const ReactComponentLifetime = (): JSX.Element => {
   return (
     <section className="grid grid-cols-[auto_1fr] gap-4">
       <section className="grid grid-rows-[auto_1fr] gap-4">
-        <header>Header</header>
+        <ReactComponentLifetimeHeader />
         <section className="grid grid-cols-[1fr_4px_1fr_4px_1fr] gap-2">
           <section>COL 1</section>
           <div className="h-full bg-zinc-400" />
