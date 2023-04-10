@@ -77,6 +77,9 @@
     "@typescript-eslint/no-throw-literal": "error",
     "@typescript-eslint/no-unused-expressions": "error",
     "@typescript-eslint/no-use-before-define": "error",
-    "@typescript-eslint/member-ordering": ["error", { "default": {"order": "alphabetically" }}]
+    "@typescript-eslint/member-ordering": ["error", { "default": {"order": "alphabetically" }}],
+
+    // eslint
+    "no-ternary": "off"
   }
 }
