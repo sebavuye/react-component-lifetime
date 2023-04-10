@@ -4,7 +4,7 @@ export default function Document(): JSX.Element {
   return (
     <Html lang="en">
       <Head />
-      <body>
+      <body className="h-screen bg-zinc-900">
         <Main />
         <NextScript />
       </body>
