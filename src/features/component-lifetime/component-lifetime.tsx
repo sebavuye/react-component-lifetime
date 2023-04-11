@@ -1,7 +1,10 @@
 import { ComponentLifetimeDescription } from "@/features/component-lifetime/component-lifetime-description";
 import { ComponentLifetimeHeader } from "@/features/component-lifetime/component-lifetime-header";
 import { ComponentLifetimeRender } from "@/features/component-lifetime/component-lifetime-render";
+import { DescriptionId } from "@/features/component-lifetime/types";
 import type { DescriptionLookup } from "@/features/component-lifetime/types";
+import { Tooltip } from "@/components";
+import { tooltips } from "@/features/component-lifetime/consts";
 import { useState } from "react";
 
 export const ComponentLifetime = (): JSX.Element => {
@@ -14,7 +17,7 @@ export const ComponentLifetime = (): JSX.Element => {
   return (
     <section className="grid grid-cols-[auto_1fr] gap-4">
       <section className="grid grid-rows-[auto_1fr] gap-4">
-        <ComponentLifetimeHeader onReadMore={handleReadMoreClick} />
+        <ComponentLifetimeHeader />
         <section className="grid grid-cols-[1fr_4px_1fr_4px_1fr] gap-2">
           <section>
             <ComponentLifetimeRender />
@@ -27,6 +30,17 @@ export const ComponentLifetime = (): JSX.Element => {
       </section>
 
       {descriptionId ? <ComponentLifetimeDescription id={descriptionId} /> : null}
+
+      {tooltips.map(tooltip => (
+        <Tooltip
+          key={tooltip.descriptionId}
+          anchorSelect={`#${tooltip.descriptionId}`}
+          place={tooltip.descriptionId === DescriptionId.componentLifetime ? "bottom" : "top"}
+          onActionButtonClick={() => handleReadMoreClick(tooltip.descriptionId)}
+        >
+          {tooltip.summary}
+        </Tooltip>
+      ))}
     </section>
   );
 };

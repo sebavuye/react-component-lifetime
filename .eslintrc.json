@@ -81,6 +81,8 @@
 
     // eslint
     "no-ternary": "off",
-    "one-var": "off"
+    "one-var": "off",
+    "no-duplicate-imports": "off",
+    "no-shadow": "off"
   }
 }

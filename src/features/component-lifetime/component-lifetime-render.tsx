@@ -1,9 +1,10 @@
 import { ComponentLifetimeDiagramItem } from "@/features/component-lifetime/component-lifetime-diagram-item";
+import { DescriptionId } from "@/features/component-lifetime/types";
 
 export const ComponentLifetimeRender = (): JSX.Element => (
   <ComponentLifetimeDiagramItem isBlock className="bg-gradient-to-r from-sky-600 to-cyan-700 text-zinc-100">
     <div>
-      <span className="mb-2 inline-block font-bold" id="renderMount">
+      <span className="mb-2 inline-block font-bold" id={DescriptionId.renderMount}>
         Render
       </span>
     </div>

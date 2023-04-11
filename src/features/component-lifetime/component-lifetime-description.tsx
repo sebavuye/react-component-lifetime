@@ -6,5 +6,5 @@ interface ReactComponentLifetimeDescriptionProps {
 }
 
 export const ComponentLifetimeDescription = ({ id }: ReactComponentLifetimeDescriptionProps): JSX.Element | null => (
-  <section className="py-4 text-zinc-100">{descriptionLookup[id]}</section>
+  <section className="py-4 leading-loose text-zinc-100">{descriptionLookup[id]}</section>
 );
