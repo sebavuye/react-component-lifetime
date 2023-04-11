@@ -1,5 +1,7 @@
-import type { ColumnHeader } from "@/features/component-lifetime/types";
+import type { ColumnHeader, DescriptionLookup } from "@/features/component-lifetime/types";
+import { DescriptionId } from "@/features/component-lifetime/types";
 import { Fragment } from "react";
+import { Tooltip } from "react-tooltip";
 
 export const columns: Array<ColumnHeader> = [
   {
@@ -11,10 +13,14 @@ export const columns: Array<ColumnHeader> = [
   { title: "Unmount" },
 ];
 
-export const ComponentLifetimeHeader = (): JSX.Element => (
+interface ComponentLifetimeHeaderProps {
+  onReadMore: (id: keyof DescriptionLookup) => void;
+}
+
+export const ComponentLifetimeHeader = ({ onReadMore }: ComponentLifetimeHeaderProps): JSX.Element => (
   <header
     className="grid gap-5 border-2 border-zinc-900 py-4 hover:border-2 hover:border-violet-500 hover:bg-violet-500/10"
-    id="componentLifetime"
+    id={DescriptionId.componentLifetime}
     style={{ gridTemplateColumns: `repeat(${columns.length}, minmax(0, 1fr))` }}
   >
     {columns.map(column => (
@@ -24,5 +30,18 @@ export const ComponentLifetimeHeader = (): JSX.Element => (
         </h2>
       </Fragment>
     ))}
+
+    <Tooltip clickable anchorSelect={`#${DescriptionId.componentLifetime}`} place="bottom">
+      <div className="flex flex-col items-end">
+        <span className="mb-2 text-zinc-100">Phases of Reacts component lifetime.</span>
+        <button
+          className="text-xs text-violet-300"
+          type="button"
+          onClick={() => onReadMore(DescriptionId.componentLifetime)}
+        >
+          Read more
+        </button>
+      </div>
+    </Tooltip>
   </header>
 );

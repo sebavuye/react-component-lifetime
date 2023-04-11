@@ -14,13 +14,13 @@ export const ComponentLifetime = (): JSX.Element => {
   return (
     <section className="grid grid-cols-[auto_1fr] gap-4">
       <section className="grid grid-rows-[auto_1fr] gap-4">
-        <ComponentLifetimeHeader />
+        <ComponentLifetimeHeader onReadMore={handleReadMoreClick} />
         <section className="grid grid-cols-[1fr_4px_1fr_4px_1fr] gap-2">
           <section>
             <ComponentLifetimeRender />
           </section>
           <div className="h-full bg-zinc-400" />
-          <section onClick={() => handleReadMoreClick("test2")}>COL 2</section>
+          <section>COL 2</section>
           <div className="h-full bg-zinc-400" />
           <section>COL 3</section>
         </section>

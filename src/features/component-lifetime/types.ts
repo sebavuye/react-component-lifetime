@@ -6,4 +6,9 @@ export interface ColumnHeader {
   tooltipContent?: string;
 }
 
+// eslint-disable-next-line no-shadow
+export enum DescriptionId {
+  componentLifetime = "componentLifetime",
+}
+
 export type DescriptionLookup = { [key in keyof typeof descriptionLookup]: JSX.Element };
