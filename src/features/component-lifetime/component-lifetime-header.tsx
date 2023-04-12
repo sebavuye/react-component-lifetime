@@ -10,7 +10,7 @@ export const columns: Array<ColumnHeader> = [
 
 export const ComponentLifetimeHeader = (): JSX.Element => (
   <header
-    className="grid gap-5 border-2 border-zinc-900 py-4 hover:border-2 hover:border-violet-500 hover:bg-violet-500/10"
+    className="grid gap-5 border-2 border-zinc-900 py-4 transition-colors delay-100 duration-1000 ease-in-out hover:border-2 hover:border-violet-500 hover:bg-violet-500/10"
     id={DescriptionId.componentLifetime}
     style={{ gridTemplateColumns: `repeat(${columns.length}, minmax(0, 1fr))` }}
   >
