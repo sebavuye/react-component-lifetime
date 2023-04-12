@@ -14,7 +14,13 @@ export const Tooltip = ({
   onActionButtonClick,
   ...props
 }: TooltipProps): JSX.Element => (
-  <ReactTooltip clickable anchorSelect={props.anchorSelect} place="bottom" {...props}>
+  <ReactTooltip
+    clickable
+    anchorSelect={props.anchorSelect}
+    className="z-50 !bg-zinc-700 !bg-opacity-100 !opacity-100"
+    place="bottom"
+    {...props}
+  >
     <div className="flex flex-col items-end">
       <span className="mb-2 text-zinc-100">{children}</span>
       {showActionButton ? (
