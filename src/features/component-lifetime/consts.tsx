@@ -11,5 +11,8 @@ export const tooltips: Array<Tooltip> = [
   { descriptionId: DescriptionId.mount, summary: "Mounting is the first step of the React component lifecycle." },
   { descriptionId: DescriptionId.update, summary: "Update" },
   { descriptionId: DescriptionId.unmount, summary: "Unmount" },
-  { descriptionId: DescriptionId.renderMount, summary: "Render" },
+  {
+    descriptionId: DescriptionId.renderMount,
+    summary: "The component gets called by React, and the render phase starts.",
+  },
 ];
