@@ -1,7 +1,9 @@
 import type { HTMLAttributes, ReactNode } from "react";
+import classNames from "classnames";
 
 export interface HeadingProps extends HTMLAttributes<HTMLHeadingElement> {
   children?: ReactNode;
+  className?: HTMLAttributes<undefined>["className"];
   level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 }
 
@@ -22,8 +24,12 @@ const getHeadingFontSize = (level: HeadingProps["level"]): string => {
   }
 };
 
-export const Heading = ({ level = "h1", children }: HeadingProps): JSX.Element => {
+export const Heading = ({ level = "h1", className, children }: HeadingProps): JSX.Element => {
   const HeadingTag = level;
 
-  return <HeadingTag className={`${getHeadingFontSize(level)} my-4 font-bold text-zinc-100`}>{children}</HeadingTag>;
+  return (
+    <HeadingTag className={classNames(`${getHeadingFontSize(level)} my-4 font-bold text-zinc-100`, className)}>
+      {children}
+    </HeadingTag>
+  );
 };
