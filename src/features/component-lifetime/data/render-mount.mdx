@@ -13,12 +13,13 @@ not add any of those to the DOM.
 // This is a component in JSX syntax
 return <Component prop1="random string" prop2={99}>I am a component</Component>
 
+// Internally React calls the actual function to render it
+let elements = Component({ ...props, children })
+
 // This component is converted to a React.createElement function call (during the compile time)
-return React.createElement(MyComponent, { prop1: 'random string', prop2: 99 }, 'I am a component')
+return React.createElement(Component, { prop1: 'random string', prop2: 99 }, 'I am a component')
 
 // React.createElement returns React elements
-return { MyComponent, props: { prop1: 'random string', prop2: 99 }, children: ['I am a component'] }
+return { Component, props: { prop1: 'random string', prop2: 99 }, children: ['I am a component'] }
 
-// React calls the created element tree to render the DOM elements from it. (root.render(<MyComponent />))
-let elements = MyComponent({ ...props, children })
 ```
