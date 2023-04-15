@@ -15,7 +15,7 @@ not add any of those to the DOM.
 // This is a component in JSX syntax
 return <Component prop1="random string" prop2={99}>I am a component</Component>
 
-// Internally React calls the actual function to render it
+// Internally React calls the actual function
 let elements = Component({ ...props, children })
 
 // This component is converted to a React.createElement function call (during the compile time)
