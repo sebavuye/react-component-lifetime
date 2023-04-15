@@ -83,6 +83,7 @@
     "no-ternary": "off",
     "one-var": "off",
     "no-duplicate-imports": "off",
-    "no-shadow": "off"
+    "no-shadow": "off",
+    "max-lines-per-function": ["error", 150]
   }
 }
