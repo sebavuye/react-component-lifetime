@@ -17,10 +17,13 @@ export const ComponentLifetimeDescription = ({
     <div className="flex items-center justify-center">
       <button className="flex items-center justify-center bg-zinc-700 p-2" type="button" onClick={onExpand}>
         <span
-          className={classNames("block h-0 w-0 border-y-[6px] border-y-transparent border-r-violet-300", {
-            "border-l-[8px]": isExpanded,
-            "border-r-[8px]": !isExpanded,
-          })}
+          className={classNames(
+            "block h-0 w-0 border-y-[6px] border-y-transparent border-r-violet-300 border-l-violet-300",
+            {
+              "border-l-[8px]": isExpanded,
+              "border-r-[8px]": !isExpanded,
+            }
+          )}
         />
       </button>
     </div>
