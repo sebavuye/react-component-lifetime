@@ -24,7 +24,7 @@ export const ComponentLifetime = (): JSX.Element => {
     <section
       className={classNames("grid", {
         "grid-cols-[0_100%]": isDescriptionExpanded,
-        "grid-cols-[75%_25%]": !isDescriptionExpanded,
+        "grid-cols-[50%_50%]": !isDescriptionExpanded,
       })}
     >
       <section className="grid grid-rows-[auto_1fr] gap-4">
