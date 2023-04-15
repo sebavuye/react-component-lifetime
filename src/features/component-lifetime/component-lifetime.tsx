@@ -15,7 +15,7 @@ export const ComponentLifetime = (): JSX.Element => {
   };
 
   return (
-    <section className="grid grid-cols-[auto_1fr] gap-4">
+    <section className="grid grid-cols-[75%_25%]">
       <section className="grid grid-rows-[auto_1fr] gap-4">
         <ComponentLifetimeHeader />
         <section className="grid grid-cols-[1fr_4px_1fr_4px_1fr] gap-2">
