@@ -4,18 +4,29 @@ import { ComponentLifetimeRender } from "@/features/component-lifetime/component
 import { DescriptionId } from "@/features/component-lifetime/types";
 import type { DescriptionLookup } from "@/features/component-lifetime/types";
 import { Tooltip } from "@/components";
+import classNames from "classnames";
 import { tooltips } from "@/features/component-lifetime/consts";
 import { useState } from "react";
 
 export const ComponentLifetime = (): JSX.Element => {
   const [descriptionId, setDescriptionId] = useState<keyof DescriptionLookup | undefined>();
+  const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
 
   const handleReadMoreClick = (id: keyof DescriptionLookup): void => {
     setDescriptionId(id);
   };
 
+  const handleDescriptionExpandClick = (): void => {
+    setIsDescriptionExpanded(prevState => !prevState);
+  };
+
   return (
-    <section className="grid grid-cols-[75%_25%]">
+    <section
+      className={classNames("grid", {
+        "grid-cols-[0_100%]": isDescriptionExpanded,
+        "grid-cols-[75%_25%]": !isDescriptionExpanded,
+      })}
+    >
       <section className="grid grid-rows-[auto_1fr] gap-4">
         <ComponentLifetimeHeader />
         <section className="grid grid-cols-[1fr_4px_1fr_4px_1fr] gap-2">
@@ -29,7 +40,13 @@ export const ComponentLifetime = (): JSX.Element => {
         </section>
       </section>
 
-      {descriptionId ? <ComponentLifetimeDescription id={descriptionId} /> : null}
+      {descriptionId ? (
+        <ComponentLifetimeDescription
+          id={descriptionId}
+          isExpanded={isDescriptionExpanded}
+          onExpand={handleDescriptionExpandClick}
+        />
+      ) : null}
 
       {tooltips.map(tooltip => (
         <Tooltip
