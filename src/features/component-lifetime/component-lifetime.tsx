@@ -22,7 +22,7 @@ export const ComponentLifetime = (): JSX.Element => {
 
   return (
     <section
-      className={classNames("grid", {
+      className={classNames("grid min-h-0", {
         "grid-cols-[0_100%]": isDescriptionExpanded,
         "grid-cols-[50%_50%]": !isDescriptionExpanded,
       })}
