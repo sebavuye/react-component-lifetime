@@ -1,4 +1,4 @@
-## Render
+import { Collapse } from "@/components/mdx/collapse";
 
 A component is a function that accepts an object of properties (props) and returns a plain JavaScript object that describes the UI.
 
@@ -23,3 +23,27 @@ return React.createElement(Component, { prop1: 'random string', prop2: 99 }, 'I 
 // React.createElement returns React elements
 return { Component, props: { prop1: 'random string', prop2: 99 }, children: ['I am a component'] }
 ```
+
+<Collapse title='Read more'>
+    The component gets called by React, and the render phase starts. During this phase, React asks the component for the UI
+    that it holds, usually written in JSX. Internally React converts the JSX to React elements using the `React.createElement()` function. Those
+    React elements are not actual DOM nodes but plain JavaScript objects that describe DOM nodes. React doesn't update the real DOM during the render phase.
+
+    The component gets called by React, and the render phase starts. During this phase, React asks the component for the UI
+    that it holds, usually written in JSX. Internally React converts the JSX to React elements using the `React.createElement()` function. Those
+    React elements are not actual DOM nodes but plain JavaScript objects that describe DOM nodes. React doesn't update the real DOM during the render phase.
+
+    ```jsx
+    // This is a component in JSX syntax
+    return <Component prop1="random string" prop2={99}>I am a component</Component>
+
+    // Internally React calls the actual function
+    let elements = Component({ ...props, children })
+
+    // This component is converted to a React.createElement function call (during the compile time)
+    return React.createElement(Component, { prop1: 'random string', prop2: 99 }, 'I am a component')
+
+    // React.createElement returns React elements
+    return { Component, props: { prop1: 'random string', prop2: 99 }, children: ['I am a component'] }
+    ```
+</Collapse>
