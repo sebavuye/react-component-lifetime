@@ -3,6 +3,9 @@ import type { HeadingProps } from "@/components";
 import type { ReactNode } from "react";
 
 export const mdxComponents = {
+  blockquote: (props: { children?: ReactNode }) => (
+    <blockquote className="border-l-8 border-l-zinc-300 bg-zinc-700 p-2 text-sm italic leading-6" {...props} />
+  ),
   code: (props: { children?: ReactNode }) => <code className="hljs" {...props} />,
   em: (props: { children?: ReactNode }) => <span className="italic" {...props} />,
   h1: (props: HeadingProps) => <Heading level="h1" {...props} />,
