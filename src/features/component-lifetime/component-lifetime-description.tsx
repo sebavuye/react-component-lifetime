@@ -13,9 +13,13 @@ export const ComponentLifetimeDescription = ({
   isExpanded,
   onExpand,
 }: ReactComponentLifetimeDescriptionProps): JSX.Element | null => (
-  <section className="grid grid-cols-[2rem_minmax(0,_1fr)] gap-2 bg-zinc-900 pb-4 leading-loose text-zinc-100">
+  <section className="grid min-h-0 grid-cols-[2rem_minmax(0,_1fr)] gap-2 bg-zinc-900 pb-4 leading-loose text-zinc-100">
     <div className="flex items-center justify-center">
-      <button className="flex items-center justify-center bg-zinc-700 p-2" type="button" onClick={onExpand}>
+      <button
+        className="flex min-h-0 items-center justify-center overflow-auto bg-zinc-700 p-2"
+        type="button"
+        onClick={onExpand}
+      >
         <span
           className={classNames(
             "block h-0 w-0 border-y-[6px] border-y-transparent border-r-violet-300 border-l-violet-300",
