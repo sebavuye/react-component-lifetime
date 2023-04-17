@@ -1,13 +1,12 @@
 ## Render
 
-A component accepts an object of properties (props) and returns a plain JavaScript object that describes the UI.
+A component is a function that accepts an object of properties (props) and returns a plain JavaScript object that describes the UI.
 
 <br />
 
 The component gets called by React, and the render phase starts. During this phase, React asks the component for the UI
-that it holds. Internally React converts the JSX to React elements by using `React.createElement()` function. Those
-React elements are just plain JavaScript objects that describe DOM nodes, but these objects aren't DOM nodes. React does
-not add any of those to the DOM.
+that it holds, usually written in JSX. Internally React converts the JSX to React elements using the `React.createElement()` function. Those
+React elements are not actual DOM nodes but plain JavaScript objects that describe DOM nodes. React doesn't update the real DOM during the render phase.
 
 <br />
 
