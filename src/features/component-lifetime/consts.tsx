@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 
 interface Tooltip {
   descriptionId: DescriptionId;
+  showActionButton?: boolean;
   summary: ReactNode;
 }
 

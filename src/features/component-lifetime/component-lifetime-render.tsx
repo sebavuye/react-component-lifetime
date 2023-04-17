@@ -1,14 +1,23 @@
 import { ComponentLifetimeDiagramItem } from "@/features/component-lifetime/component-lifetime-diagram-item";
 import { DescriptionId } from "@/features/component-lifetime/types";
+import type { DescriptionLookup } from "@/features/component-lifetime/types";
 
-export const ComponentLifetimeRender = (): JSX.Element => (
+interface ComponentLifetimeRenderProps {
+  onClick: (id: keyof DescriptionLookup) => void;
+}
+
+export const ComponentLifetimeRender = ({ onClick }: ComponentLifetimeRenderProps): JSX.Element => (
   <ComponentLifetimeDiagramItem isBlock className="bg-gradient-to-r from-sky-600 to-cyan-700 text-zinc-100">
-    <div>
-      <span className="mb-2 inline-block font-bold" id={DescriptionId.renderMount}>
+    <button type="button">
+      <span
+        className="inline-block cursor-pointer font-bold"
+        id={DescriptionId.renderMount}
+        onClick={() => onClick(DescriptionId.renderMount)}
+      >
         Render
       </span>
-    </div>
-    <div className="border-b-2 border-b-amber-400 text-right text-xs text-zinc-700">
+    </button>
+    <div className="mt-2 border-b-2 border-b-amber-400 text-right text-xs text-zinc-700">
       <span className="inline-block bg-amber-400 p-1">React calls the component</span>
     </div>
     <div className="grid bg-zinc-900">

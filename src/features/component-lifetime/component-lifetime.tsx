@@ -31,7 +31,7 @@ export const ComponentLifetime = (): JSX.Element => {
         <ComponentLifetimeHeader />
         <section className="grid grid-cols-[1fr_4px_1fr_4px_1fr] gap-2">
           <section>
-            <ComponentLifetimeRender />
+            <ComponentLifetimeRender onClick={handleReadMoreClick} />
           </section>
           <div className="h-full bg-zinc-400" />
           <section>COL 2</section>
@@ -53,6 +53,7 @@ export const ComponentLifetime = (): JSX.Element => {
           key={tooltip.descriptionId}
           anchorSelect={`#${tooltip.descriptionId}`}
           place={tooltip.descriptionId === DescriptionId.componentLifetime ? "bottom" : "top"}
+          showActionButton={Object.hasOwn(tooltip, "showActionButton")}
           onActionButtonClick={() => handleReadMoreClick(tooltip.descriptionId)}
         >
           {tooltip.summary}
