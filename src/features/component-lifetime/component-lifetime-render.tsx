@@ -11,8 +11,9 @@ interface ComponentLifetimeRenderProps {
 export const ComponentLifetimeRender = ({ descriptionId, onClick }: ComponentLifetimeRenderProps): JSX.Element => (
   <ComponentLifetimeDiagramItem
     isBlock
-    className={classNames("bg-gradient-to-r from-sky-600 to-cyan-700 text-zinc-100", {
+    className={classNames("bg-gradient-to-r from-sky-600 to-cyan-700 ", {
       "text-lime-400": descriptionId === DescriptionId.renderMount,
+      "text-zinc-100": descriptionId !== DescriptionId.renderMount,
     })}
   >
     <button type="button">

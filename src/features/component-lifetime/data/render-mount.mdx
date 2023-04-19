@@ -4,7 +4,9 @@ import { Collapse } from "@/components/mdx/collapse";
 
 React `mount` and `update` phase has two phases. - Render - Commit
 
-The initial render phase starts when a React application is mounted. During this phase, React asks the components for
-the UI that they hold, usually written in JSX (but not necessarily). React begins with calling the root component and
-works its way down to find all the components it needs to call. When React finishes calling all the components, it
-creates a JavaScript object representing the DOM structure. footnote: often refferred to as virtual DOM
+The initial render phase starts when a React application is mounted. During this phase, React asks the components
+for the UI that they hold, usually written in JSX (but not necessarily). React begins with calling the root component
+and works its way down to find all the components it needs to call. When React finishes calling all the components, it
+creates a JavaScript object representing the DOM structure[^1].
+
+[^1]: Often referred to as virtual DOM

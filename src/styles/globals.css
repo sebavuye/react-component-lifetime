@@ -6,3 +6,10 @@
   height: 100%;
   width: 100%;
 }
+
+[data-footnotes="true"].footnotes > h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid rgb(244 244 245);
+  line-height: inherit;
+}
