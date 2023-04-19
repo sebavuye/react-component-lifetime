@@ -18,7 +18,12 @@ export const ComponentLifetimeRender = ({ onClick }: ComponentLifetimeRenderProp
       </span>
     </button>
     <div className="mt-2 border-b-2 border-b-amber-400 text-right text-xs text-zinc-700">
-      <span className="inline-block bg-amber-400 p-1">React calls the component</span>
+      <span
+        className="inline-block cursor-pointer bg-amber-400 p-1"
+        onClick={() => onClick(DescriptionId.renderMountReactCallsComponent)}
+      >
+        React calls the root component
+      </span>
     </div>
     <div className="grid bg-zinc-900">
       <div className="m-2 flex items-center justify-center bg-zinc-400 bg-gradient-to-r from-zinc-400 to-slate-400 p-4 text-center text-sm text-zinc-900">

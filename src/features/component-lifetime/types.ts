@@ -6,6 +6,7 @@ export enum DescriptionId {
   update = "update",
   unmount = "unmount",
   renderMount = "renderMount",
+  renderMountReactCallsComponent = "renderMountReactCallsComponent",
 }
 
 export interface ColumnHeader {

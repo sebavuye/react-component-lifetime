@@ -1,0 +1,35 @@
+## React calls the component
+
+> A component is a function that accepts an object of properties (props) and returns a plain JavaScript object that
+> describes the UI.
+
+<br />
+
+The root component gets called by React, and the render phase of the mount phase starts. During the render phase, React
+asks the component for the UI that it holds, usually written in JSX (but not necessarily).
+
+<br />
+
+Internally React converts the JSX to React elements using the `React.createElement()` function. Those React elements are
+not actual DOM nodes but plain JavaScript objects that describe DOM nodes. React doesn't interact with the actual DOM
+during the renders phase, it only creates a JavaScript object that represents the actual DOM.
+
+<br />
+
+```jsx
+// This is a component in JSX syntax
+return (
+  <Component prop1="random string" prop2={99}>
+    I am a component
+  </Component>
+);
+
+// Internally React calls the actual function
+let elements = Component({ ...props, children });
+
+// This component is converted to a React.createElement function call (during the compile time)
+return React.createElement(Component, { prop1: "random string", prop2: 99 }, "I am a component");
+
+// React.createElement returns React elements
+return { Component, props: { prop1: "random string", prop2: 99 }, children: ["I am a component"] };
+```
