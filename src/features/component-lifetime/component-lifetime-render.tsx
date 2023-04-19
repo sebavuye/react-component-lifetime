@@ -40,13 +40,13 @@ export const ComponentLifetimeRender = ({ descriptionId, onClick }: ComponentLif
       </button>
     </div>
     <div className="grid bg-zinc-900">
-      <div className="m-2 flex items-center justify-center bg-zinc-400 bg-gradient-to-r from-zinc-400 to-slate-400 p-4 text-center text-sm text-zinc-900">
+      <div className="m-2 flex items-center justify-center bg-zinc-400 bg-gradient-to-r from-zinc-400 to-slate-400 p-2 text-center text-sm text-zinc-900">
         Evaluate local variables
       </div>
-      <div className="mx-2 mb-2 mt-0 flex items-center justify-center bg-zinc-400 bg-gradient-to-r from-zinc-400 to-slate-400 p-4 text-center text-sm text-zinc-900">
+      <div className="mx-2 mb-2 mt-0 flex items-center justify-center bg-zinc-400 bg-gradient-to-r from-zinc-400 to-slate-400 p-2 text-center text-sm text-zinc-900">
         Schedule effects
       </div>
-      <div className="mx-2 mb-2 mt-0 flex items-center justify-center bg-zinc-400 bg-gradient-to-r from-zinc-400 to-slate-400 p-4 text-center text-sm text-zinc-900">
+      <div className="mx-2 mb-2 mt-0 flex items-center justify-center bg-zinc-400 bg-gradient-to-r from-zinc-400 to-slate-400 p-2 text-center text-sm text-zinc-900">
         Initialize hooks
       </div>
     </div>
