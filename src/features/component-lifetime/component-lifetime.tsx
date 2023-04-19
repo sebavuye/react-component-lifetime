@@ -31,7 +31,7 @@ export const ComponentLifetime = (): JSX.Element => {
         <ComponentLifetimeHeader />
         <section className="grid grid-cols-[1fr_4px_1fr_4px_1fr] gap-2">
           <section>
-            <ComponentLifetimeRender onClick={handleReadMoreClick} />
+            <ComponentLifetimeRender descriptionId={descriptionId} onClick={handleReadMoreClick} />
           </section>
           <div className="h-full bg-zinc-400" />
           <section>COL 2</section>
