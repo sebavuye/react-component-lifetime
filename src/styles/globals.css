@@ -13,3 +13,8 @@
   border-bottom: 1px solid rgb(244 244 245);
   line-height: inherit;
 }
+
+[data-footnotes="true"].footnotes > ol > li > p,
+[data-footnotes="true"].footnotes > ul > li > p {
+  display: inline;
+}
