@@ -14,6 +14,6 @@ export const tooltips: Array<Tooltip> = [
   { descriptionId: DescriptionId.unmount, summary: "Unmount" },
   {
     descriptionId: DescriptionId.renderMount,
-    summary: "The component gets called by React, and the render phase starts.",
+    summary: "Rendering is the moment a function component is called by React.",
   },
 ];

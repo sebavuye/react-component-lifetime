@@ -14,6 +14,11 @@
   line-height: inherit;
 }
 
+[data-footnotes="true"].footnotes > ol > li,
+[data-footnotes="true"].footnotes > ul > li {
+  padding-left: 0;
+}
+
 [data-footnotes="true"].footnotes > ol > li > p,
 [data-footnotes="true"].footnotes > ul > li > p {
   display: inline;

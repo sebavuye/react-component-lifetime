@@ -14,8 +14,8 @@ export const mdxComponents = {
   h4: (props: HeadingProps) => <Heading level="h4" {...props} />,
   h5: (props: HeadingProps) => <Heading level="h5" {...props} />,
   h6: (props: HeadingProps) => <Heading level="h6" {...props} />,
-  li: (props: { children?: ReactNode }) => <li {...props} />,
+  li: (props: { children?: ReactNode }) => <li className="pl-4" {...props} />,
   ol: (props: { children?: ReactNode }) => <ol className="list-inside list-decimal" {...props} />,
   strong: (props: { children?: ReactNode }) => <span className="font-bold" {...props} />,
-  ul: (props: { children?: ReactNode }) => <ul className="list-disc	" {...props} />,
+  ul: (props: { children?: ReactNode }) => <ul className="list-inside list-disc" {...props} />,
 };
